@@ -28,6 +28,9 @@ DOMAIN = {'temblores': {
                     'field': 'posiciones'
                 },
                 'schema': {
+                    'sensor' : {
+                    'type': 'string'
+                    }
                     'posiciones': {
                         'type': 'integer'
                     },
