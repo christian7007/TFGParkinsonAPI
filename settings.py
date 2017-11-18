@@ -18,7 +18,7 @@ DOMAIN = {'temblores': {
                         'type': 'string'
                     },
                     'timestamp_inicio':{
-                        'type': 'timestamp'
+                        'type': 'integer'
                     }
                 }
             },
@@ -28,17 +28,20 @@ DOMAIN = {'temblores': {
                     'field': 'posiciones'
                 },
                 'schema': {
+                    'id': {
+                        'type': 'integer'
+                    },
                     'sensor' : {
-                    'type': 'string'
-                    }
+                        'type': 'string'
+                    },
                     'posiciones': {
                         'type': 'integer'
                     },
                     'db_timestamp': {
-                        'type': 'timestamp'
+                        'type': 'integer'
                     },
                     'app_timestamp': {
-                        'type': 'timestamp'
+                        'type': 'integer'
                     },
                     'datos': {
                         'type': 'string'
