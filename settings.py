@@ -19,6 +19,9 @@ DOMAIN = {'temblores': {
                     },
                     'timestamp_inicio':{
                         'type': 'integer'
+                    },
+                    'device_id':{
+                        'type': 'string'
                     }
                 }
             },
@@ -45,6 +48,9 @@ DOMAIN = {'temblores': {
                     },
                     'datos': {
                         'type': 'string'
+                    },
+                    'device_id':{
+                        'type': 'string'
                     }
                 }
           },
@@ -58,6 +64,9 @@ DOMAIN = {'temblores': {
                         'type': 'integer'
                     },
                     'posiciones': {
+                        'type': 'string'
+                    },
+                    'device_id':{
                         'type': 'string'
                     }
                 }
