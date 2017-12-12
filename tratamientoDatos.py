@@ -20,7 +20,7 @@ class OPDatosProcesados(Document):
     config_database = "datos_procesados"
     config_collection = "datos_sensor"
 
-NUM_DESCARTES = 1
+NUM_DESCARTES = 10
 
 '''
 x=datetime.today()
@@ -50,23 +50,20 @@ def procesarDatos():
 
                 minimo = sys.maxint
                 for queue in queues:
-                    '''
-                    del queue[0:NUM_DESCARTES]
-                    del queue[len(queue) - NUM_DESCARTES + 1:len(queue)]
-                    '''
                     #obtenemos la lista de menor longitud
                     if minimo > queue.count():
                         minimo = queue.count()
 
-                for i in xrange(0, minimo):
-                    op = OPDatosProcesados()
-                    op["dispositivo"] = dispositivo
-                    op["posicion"] = posicion
-                    op["sensores"] = sensores
-                    op["timestamp"] = queues[0][i]["db_timestamp"]
-                    op["datos"] = ""
-                    for queue in queues:
-                        op["datos"] += queue[i]["datos"] + ";"
-                    OPDatosProcesados.insert(op)
+                if minimo > NUM_DESCARTES:
+                    for i in xrange(NUM_DESCARTES, minimo - NUM_DESCARTES):
+                        op = OPDatosProcesados()
+                        op["dispositivo"] = dispositivo
+                        op["posicion"] = posicion
+                        op["sensores"] = sensores
+                        op["timestamp"] = queues[0][i]["db_timestamp"]
+                        op["datos"] = ""
+                        for queue in queues:
+                            op["datos"] += queue[i]["datos"] + ";"
+                        OPDatosProcesados.insert(op)
 
 procesarDatos()
