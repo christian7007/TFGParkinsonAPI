@@ -51,6 +51,9 @@ DOMAIN = {'temblores': {
                     },
                     'device_id':{
                         'type': 'string'
+                    },
+                    'tipo_sensor':{
+                        'type': 'string'
                     }
                 }
           },
@@ -110,6 +113,9 @@ DOMAIN = {'temblores': {
                         'type': 'string'
                     },
                     'device_id':{
+                        'type': 'string'
+                    },
+                    'observaciones': {
                         'type': 'string'
                     }
                 }
