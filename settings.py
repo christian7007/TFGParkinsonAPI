@@ -2,6 +2,8 @@ RESOURCE_METHODS = ['GET','POST']
 
 ITEM_METHODS = ['GET','PUT']
 
+XML = False
+
 DOMAIN = {'temblores': {
                 'additional_lookup': {
                     'url': 'regex("[\w]+")',
@@ -25,7 +27,7 @@ DOMAIN = {'temblores': {
                     }
                 }
             },
-          'datos_sensor': {
+            'datos_sensor': {
                 'additional_lookup': {
                     'url': 'regex("[\w]+")',
                     'field': 'posiciones'
@@ -117,6 +119,37 @@ DOMAIN = {'temblores': {
                     },
                     'observaciones': {
                         'type': 'string'
+                    }
+                }
+          },
+          'usuario': {
+              'additional_lookup': {
+                    'url': 'regex("[\w]+")',
+                    'field': 'nombre'
+                },
+                'schema': {
+                    'nombre': {
+                        'type': 'string',
+                        'unique': True
+                    },
+                    'password': {
+                        'type': 'string'
+                    }
+                }
+          },
+          'paciente': {
+              'additional_lookup': {
+                    'url': 'regex("[\w]+")',
+                    'field': 'nombre'
+                },
+                'schema': {
+                    'nombre': {
+                        'type': 'string',
+                        'unique': True
+                    },
+                    'device_id': {
+                        'type': 'string',
+                        'unique': True
                     }
                 }
           }
