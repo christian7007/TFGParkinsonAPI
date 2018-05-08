@@ -1,20 +1,21 @@
 version: '3'
 
 services:
-	#api:
-	#	image: tfgparkinson_api
-	#	container_name: tfgparkinson_api
-	#	ports:
-	#		- "5050:5050"
 
 	database:
 		image: mongo
 		container_name: tfgparkinson_db
 
-	webserver:
-		image: tfgparkinson_web
-		container_name: tfgparkinson_web
+	api:
+		image: tfgparkinson_api
+		container_name: tfgparkinson_api
 		ports:
-			- "80:80"
+			- "5050:5050"
 		depends_on:
 			- database
+			
+	#webserver:
+	#	image: tfgparkinson_web
+	#	container_name: tfgparkinson_web
+	#	ports:
+	#		- "80:80"
