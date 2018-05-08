@@ -2,6 +2,8 @@ RESOURCE_METHODS = ['GET','POST']
 
 ITEM_METHODS = ['GET','PUT']
 
+MONGO_HOST = "172.17.0.1"
+
 XML = False
 
 DOMAIN = {'temblores': {

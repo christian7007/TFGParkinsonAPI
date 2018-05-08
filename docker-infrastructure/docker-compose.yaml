@@ -1,0 +1,17 @@
+api:
+	image: tfgparkinson_api
+	container_name: tfgparkinson_api
+	ports:
+		- "5050:5050"
+
+database:
+	image: mongo
+	container_name: tfgparkinson_db
+	ports:
+		- "27017:27017"
+
+webserver:
+	image: tfgparkinson_web
+	container_name: tfgparkinson_web
+	ports:
+		- "80:80"
