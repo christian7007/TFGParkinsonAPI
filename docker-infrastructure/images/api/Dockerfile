@@ -15,4 +15,4 @@ RUN git clone https://github.com/christian7007/TFGParkinsonAPI.git
 
 EXPOSE 5050
 
-CMD ["python", "TFGParkinsonAPI/api.py"]
+CMD ["python", "TFGParkinsonAPI/api/api.py"]
