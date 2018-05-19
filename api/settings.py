@@ -121,6 +121,9 @@ DOMAIN = {'temblores': {
                     },
                     'observaciones': {
                         'type': 'string'
+                    },
+                    'fecha': {
+                        'type': 'string'
                     }
                 }
           },
