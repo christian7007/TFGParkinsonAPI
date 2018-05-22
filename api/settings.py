@@ -2,7 +2,7 @@ RESOURCE_METHODS = ['GET','POST']
 
 ITEM_METHODS = ['GET','PUT']
 
-MONGO_HOST = "database"
+DATE_FORMAT = 'DD/MM/YYYY HH:MM'
 
 XML = False
 
@@ -45,10 +45,10 @@ DOMAIN = {'temblores': {
                         'type': 'integer'
                     },
                     'db_timestamp': {
-                        'type': 'integer'
+                        'type': 'string'
                     },
                     'app_timestamp': {
-                        'type': 'integer'
+                        'type': 'string'
                     },
                     'datos': {
                         'type': 'string'
