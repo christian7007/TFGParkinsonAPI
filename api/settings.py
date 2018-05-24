@@ -157,5 +157,29 @@ DOMAIN = {'temblores': {
                         'unique': True
                     }
                 }
+          },
+          'tomas': {
+              'additional_lookup': {
+                    'url': 'regex("[\w]+")',
+                    'field': 'medicamento'
+                },
+                'schema': {
+                    'medicamento': {
+                        'type': 'string'
+                    },
+                    'hora': {
+                        'type': 'string'
+                    },
+                    'fecha': {
+                        'type': 'string'
+                    },
+                    'tomado': {
+                        'type': 'string'
+                    },
+                    'device_id': {
+                        'type': 'string',
+                        'unique': True
+                    }
+                }
           }
 }
